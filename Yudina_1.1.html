@@ -3,7 +3,10 @@
   "use strict";
 
   let tempCels = +prompt("Введите значение температуры в градусах по Цельсию: ");
-  let tempFareng =  9 / 5 * tempCels + 32;
-  alert(`Температура ${tempCels} градусов Цельсия равняется ${Math.round(tempFareng)} градуса по Фаренгейту`);
+  if (!isNaN(tempCels)) {
+    let tempFareng =  9 / 5 * tempCels + 32;
+    alert(`Температура ${tempCels} градусов Цельсия равняется ${Math.round(tempFareng)} градуса по Фаренгейту`);
+  }else (alert(`Введите число!`))
+
 </script>
 
