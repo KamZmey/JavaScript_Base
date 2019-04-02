@@ -1,0 +1,63 @@
+<meta charset="UTF-8">
+<script>
+  "use strict";
+
+  /**
+   * Функция суммы.
+   */
+
+  function getSum(a, b) {
+    return a + b;
+  }
+
+  /**
+   * Функция вычитания.
+   */
+
+  function getReduce(a, b) {
+    return a - b;
+  }
+
+  /**
+   * Функция умножения.
+   */
+
+  function getMultiply(a, b) {
+    return a * b;
+  }
+
+  /**
+   * Функция деления.
+   */
+
+  function getDiv(a, b) {
+    return a / b;
+  }
+  /**
+   * Функция выполнения математического действия в зависимости от значений
+   */
+  function mathOperation(a, b, operation){
+    switch(operation){
+      case '+':
+        return getSum(a,b);
+
+      case '-':
+        return getReduce(a, b);
+
+      case '/':
+        return getDiv(a, b);
+
+      case '*':
+        return getMultiply(a, b);
+
+    }
+  }
+
+
+  let a = +prompt('введите  целое число');
+  let operation = prompt('какое действие необходимо выполнить? \n введите "+,-,/,*"');
+  let b = +prompt('введите  еще одно целое число');
+  alert(mathOperation(a, b, operation))
+
+
+</script>
